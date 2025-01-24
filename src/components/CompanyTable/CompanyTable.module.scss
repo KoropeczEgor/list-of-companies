@@ -1,0 +1,73 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .table {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.53); // Исправлено на rgba
+    width: 33%;
+
+    .addCompanyForm {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      .inputText {
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        color: #000;
+        outline: none;
+      }
+    }
+
+    .wrapperTr {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .tbody {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .company {
+        display: flex;
+        flex-direction: column;
+
+        .companyTr {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &.selected {
+            background-color: #09cde7; // Цвет для выделенной строки
+          }
+
+          .btnDelete {
+            cursor: pointer;
+            border: none;
+            border-radius: 0.7rem;
+            padding: 0.9rem;
+            text-decoration: none;
+            background: rgba(255, 0, 0, 0.47);
+            box-shadow: 0 5px 0 rgba(197, 0, 0, 0.64);
+            color: #ffffff;
+
+            &:active {
+              background: rgba(126, 2, 2, 0.47);
+              box-shadow: 0 0 0 rgba(197, 0, 0, 0.71);
+              position: relative;
+              top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
